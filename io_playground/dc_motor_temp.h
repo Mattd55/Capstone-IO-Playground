@@ -135,19 +135,29 @@ const char dc_motor_temp_html[] PROGMEM = R"rawliteral(
 
     function initWebSocket() {
         socket = new WebSocket('ws://' + window.location.hostname + ':81/');
+        socket.onopen = function() {
+            setTemperatureThresholdDefault();
+        };
+
         socket.onmessage = function(event) {
             var data = JSON.parse(event.data);
             updateThermometer(data.temperature);
             updateMotorStatus(data.motorOn);
         };
-        
+
         socket.onerror = function(event) {
             console.error("WebSocket error:", event);
         };
 
         refreshData();
     }
-        function refreshData() {
+
+    function setTemperatureThresholdDefault() {
+        document.getElementById("temperatureThreshold").value = "30";
+        setTemperatureThreshold();
+    }
+
+    function refreshData() {
         if (socket.readyState === WebSocket.OPEN) {
             socket.send('refreshData');
         } else {
