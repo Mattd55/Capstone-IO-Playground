@@ -115,7 +115,7 @@ const char meet_the_team_html[] PROGMEM = R"rawliteral(
     <div class="description">
       <h2>Kyle Saul</h2>
       <p>Kyle is an Electrical and Computer Engineering major at The Ohio State University. After graduation he will be continuing his role as an Instrument and 
-      Electrical Engineer at LyondellBasell, where he contributes to innovate chemical manufacturing designs. Kyle has taken a lead role in the design adn development 
+      Electrical Engineer at LyondellBasell, where he contributes to innovate chemical manufacturing designs. Kyle has taken a lead role in the design and development 
       of the PCB and hardware components, showcasing his expertise in electrical engineering and hands-on technical skills.</p>
     </div>
   </div>
