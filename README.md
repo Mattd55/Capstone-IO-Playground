@@ -1,4 +1,4 @@
-# Sadron IO Playground
+# IO Playground
 
 The IO Playground is a tool for students to learn about microcontrollers and how they work. It provides a platform for monitoring temperature readings from a DS18B20 temperature sensor. You can also toggle an LED connected to the ESP32 and view its current state. All of this is done through a web interface hosted on the ESP32.
 
